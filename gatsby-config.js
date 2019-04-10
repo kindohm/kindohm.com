@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Kindohm`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Kindohm is Mike Hodnick, a sound artist and software developer from Chaska, MN, USA. TidalCycles, code, synthesizers, and drum machines.`,
+    author: `@kindohm`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

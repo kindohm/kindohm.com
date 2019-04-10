@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`kindohm`, `music`, `tidalcycles`, `livecoding`, `code`, `algorave`, `computer`, `programming`, `chaska`, `minneapolis`, `mike hodnick`, `hodnick`]} />
     <h2 className="h3">Mike Hodnick</h2>
     <h2 className="h3">Sound Artist/Programmer from Chaska, MN, USA.</h2>
 
