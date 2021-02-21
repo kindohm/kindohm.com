@@ -4,7 +4,8 @@
   "description": "Personal web site.",
   "scripts": {
     "start": "live-server",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
