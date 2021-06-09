@@ -53,18 +53,10 @@ ul {
   align-items: stretch;
 }
 
-.left-col {
-  margin-right: 3rem;
-}
-
-.middle-col {
-  margin-right: 3rem;
-}
-
-.right-col {
-}
+.col { margin-right: 3rem; }
 
 #highlights iframe {
-  width: 425px;
+ width: 100%;
+
   /* min-width: 400px; */
 }
