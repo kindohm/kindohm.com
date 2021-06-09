@@ -54,9 +54,17 @@ ul {
 }
 
 .left-col {
-  flex-basis: 33%;
+  margin-right: 3rem;
+}
+
+.middle-col {
+  margin-right: 3rem;
 }
 
 .right-col {
-  flex-basis: 50%;
+}
+
+#highlights iframe {
+  width: 425px;
+  /* min-width: 400px; */
 }
