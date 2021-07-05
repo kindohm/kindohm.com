@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Installing and using tidal-vis">
+    <meta name="keywords" content="install, tutorial, how to, kindohm, tidal, tidal-vis">
+    <meta name="author" content="Mike Hodnick">
+    <title>
+        Installing and using tidal-vis
+    </title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #e9e8e6;
+            color: #2f2c30;
+            line-height: 1.5rem;
+        }
+
+        .container {
+            margin: auto;
+            text-align: left;
+            max-width: 800px;
+        }
+
+        pre {
+            background-color: #bac0ce;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        h2,
+        h3 {
+            margin-top: 2.5rem;
+        }
+
+        img {
+            max-width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+      <h1>tidal-vis</h1>
+
+      <p><em>This post is from 2016 and has not been updated for the latest version(s) of Tidal.</em></p>
+
+      <p>There's a hidden gem in the TidalCycles git repository called <code>tidal-vis</code>. It
+allows you to use TidalCycles pattern syntax (and Haskell functions) to create
+visual color patterns:</p>
+
+<p><img src="tidal-vis-01.png" /></p>
+
+<p>I have no idea what code I used to generate the image above, but I assure you
+that it was really easy, given my existing knowledge of TidalCycles and Haskell.</p>
+
+<p>BUT, installing <code>tidal-vis</code> takes a bit of effort. So here's how you do it.</p>
+
+<p><strong><span style="color: red;">DISCLAIMER:</span></strong> I have only gotten
+this install to work on Linux Mint 18/Cinnamon. I imagine the install is similar
+on a Mac. I tried it on Windows first, but my threshold for pain only goes so
+far. Good luck, Windows users.</p>
+
+<h3>1. Install Dependencies</h3>
+
+<p>Open a terminal and run each of these commands (assuming apt-get on
+debian Linux):</p>
+
+<pre><code>sudo apt-get install git haskell-platform libghc-gtk-dev
+cabal update
+cabal install cabal-install
+cabal install gtk2hs-buildtools</code></pre>
+
+<h3>2. Install TidalCycles</h3>
+
+<p>You can skip this step if you already have TidalCycles installed.</p>
+
+<pre><code>cabal install tidal</code></pre>
+
+<h3>3. Clone the TidalCycles repository</h3>
+
+<p>There currently is some ambiguity around whether <code>tidal-vis</code> is correctly
+published to Hackage to be installed from <code>cabal</code>. My approach is to
+just get the source code and install <code>tidal-vis</code> from the source code later.</p>
+
+<pre><code>git clone https://github.com/tidalcycles/tidal.git</code></pre>
+
+
+<p>NOTE: Remember where you cloned (e.g. <code>~/tidal</code>).</p>
+
+<h3>4. Install tidal-vis</h3>
+
+<p>Did you remember where you cloned? I'll assume <code>~/tidal</code>:</p>
+
+<pre><code>cd ~/tidal/vis
+cabal install</code></pre>
+
+
+<p>Bam. But you're not ready yet...</p>
+
+<h3>5. Install Atom and the TidalCycles package</h3>
+
+<p>If you're already using Atom and TidalCycles, then you've already done this.</p>
+
+<ul>
+<li>go to [http://atom.io](http://atom.io)</li>
+<li>download and install Atom</li>
+  <li>In Atom, install the TidalCycles package</li>
+    <li>restart Atom</li>
+</ul>
+
+<p>The instructions are also given at
+<a href="http://tidalcycles.org/getting_started.html">http://tidalcycles.org/getting_started.html#installation</a></p>
+
+<h3>6. Evil Laugh</h3>
+
+<p>If you got this far without any problems, congratulations. Cackle deeply.</p>
+
+<h3>Let's Make Patterns</h3>
+
+<p>Open Atom. Create and save a file with a .tidal extension. If you ignore this
+step, TidalCycles will not work.</p>
+
+<p>Enter the following code in the file:</p>
+
+<pre><code>import Sound.Tidal.Vis
+import qualified Graphics.Rendering.Cairo as C
+import Data.Colour
+import Data.Colour.Names
+import Data.Colour.SRGB
+let draw pat = vLines (C.withSVGSurface) "test.svg" (600,200) pat 3 1</code></pre>
+
+<p>Evaluate each of those lines one by one (Shift+Enter in Atom).</p>
+
+<p>Then type or paste the following code into the file:</p>
+
+<pre><code>draw $ superimpose (iter 8) $ every 2 (slow 3) $
+  every 3 (density 5) $ "[grey white black, lightgrey darkgrey]"</code></pre>
+
+<p>Eval the code. It will generate a file named "test.svg" somewhere on your
+system. In my case, it was put in my home directory. It will look like this:</p>
+
+<p><img src="http://i.imgur.com/tKQ3DJd.png" /></p>
+
+
+<h3>What's next?</h3>
+
+<p>Play! Modify the <code>draw</code> code above and see what else you come up with.</p>
+
+<p>If you'd like to really dig in
+to some of the color- and drawing-specific functions, you'll have to kind of
+find that information on your own. My best recommendation is to look at
+the <code>example.hs</code> file located in the TidalCycles repository:
+<a href="https://github.com/tidalcycles/Tidal/blob/master/vis/examples/example.hs">github.com/tidalcycles/Tidal/blob/master/vis/examples/example.hs</a>.</p>
+
+
+
+    </div>
+
+</body>
+
+</html>
