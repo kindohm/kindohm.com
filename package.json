@@ -1,11 +1,11 @@
 {
   "name": "kindohm.com",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Personal web site.",
   "scripts": {
-    "start": "live-server",
-    "postinstall": "husky install",
-    "build": "node scripts/build.js"
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -14,10 +14,6 @@
   "author": "Mike Hodnick <mike@kindohm.com>",
   "license": "MIT",
   "devDependencies": {
-    "fs-extra": "^9.1.0",
-    "husky": "^5.0.8",
-    "live-server": "^1.2.1",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
