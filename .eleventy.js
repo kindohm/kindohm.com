@@ -16,5 +16,7 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
       output: 'dist',
     },
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
   };
 };

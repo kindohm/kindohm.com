@@ -1,5 +1,5 @@
 <ul>
-  {% for album in discography %}
+  {% for album in releases %}
     <li>
       <a href="{{ album.link }}">{{ album.title }}</a>
       ({{ album.date | date("YYYY") }})</li>
