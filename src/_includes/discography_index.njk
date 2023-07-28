@@ -2,6 +2,6 @@
   {% for album in discography %}
     <li>
       <a href="{{ album.link }}">{{ album.title }}</a>
-      ({{ album.date | date: "%Y" }})</li>
+      ({{ album.date | date("YYYY") }})</li>
   {% endfor %}
 </ul>
