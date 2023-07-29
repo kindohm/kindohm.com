@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+---
+
+{% for release in releases | releaseById(releaseId) %}
+  <h3>{{ release.title }} ({{ release.date | date("YYYY")}})</h3>
+  {% if release.isHosted == true %}
+    <p>download: <a href="{{release.downloadUrl}}">{{release.filename}}</a>
+    </p>
+  {% endif %}
+
+  {% if release.bandcampUrl %}
+    <p>
+      <a href="{{release.bandcampUrl}}">buy on Bandcamp</a>
+    </p>
+  {% endif %}
+
+{% endfor %}
+
+<hr>
+
+{{ content | safe }}
