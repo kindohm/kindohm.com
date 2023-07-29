@@ -37,3 +37,11 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
+
+h1 a {
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}

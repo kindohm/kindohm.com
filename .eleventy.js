@@ -7,6 +7,9 @@ const dateFilter = require('nunjucks-date-filter');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addFilter('date', dateFilter);
+  eleventyConfig.addFilter('releaseById', (items, releaseId) => {
+    return items.filter((i) => i.id === releaseId);
+  });
 
   // Return your Object options:
   return {
