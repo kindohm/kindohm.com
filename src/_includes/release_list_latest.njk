@@ -1,0 +1,12 @@
+<ul>
+  {% for album in releases %}
+    {% if loop.index0 < 5 %}
+      {% include "release_list_item.njk" %}
+    {% endif %}
+  {% endfor %}
+
+</ul>
+
+<p>
+  <a href="/releases">view all {{ releases | length }} releases and other appearances</a>
+</p>

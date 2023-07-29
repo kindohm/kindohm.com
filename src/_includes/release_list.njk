@@ -1,7 +1,5 @@
 <ul>
   {% for album in releases %}
-    <li>
-      <a href="{{ album.link }}">{{ album.title }}</a>
-      ({{ album.date | date("YYYY") }})</li>
+    {% include "release_list_item.njk" %}
   {% endfor %}
 </ul>
