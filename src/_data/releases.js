@@ -7,6 +7,8 @@ const data = [
     title: 'Prompt 3',
     artist: 'kindohm',
     date: '2023-07-31T00:12:00.000Z',
+    bandcampUrl:
+      'https://kindohm.bandcamp.com/album/prompt-3?label=407192147&tab=music',
     isHosted: true,
   },
   {
@@ -192,9 +194,9 @@ const data = [
 ];
 
 module.exports = data.map((release) => {
-  const { id, isHosted, bandcampUrl } = release;
+  const { id, isHosted, hasPage, bandcampUrl } = release;
 
-  const link = `/releases/${id}`;
+  const link = hasPage ? `/releases/${id}` : bandcampUrl;
   const filename = isHosted ? `kindohm.${id}.zip` : undefined;
   const downloadUrl = filename
     ? `${contentRoot}/releases/${id}/${filename}`
