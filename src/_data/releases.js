@@ -10,6 +10,7 @@ const data = [
     bandcampUrl:
       'https://kindohm.bandcamp.com/album/prompt-3?label=407192147&tab=music',
     isHosted: true,
+    hasPage: true,
   },
   {
     id: 'merge-experience',
@@ -202,10 +203,17 @@ module.exports = data.map((release) => {
     ? `${contentRoot}/releases/${id}/${filename}`
     : undefined;
 
+  const cover = isHosted
+    ? `${contentRoot}/releases/${id}/cover.jpg`
+    : undefined;
+
+  console.log('cover', cover);
+
   return {
     ...release,
     filename,
     link,
     downloadUrl,
+    cover,
   };
 });

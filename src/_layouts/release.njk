@@ -15,8 +15,10 @@ layout: layout.njk
     </p>
   {% endif %}
 
-{% endfor %}
+  {% if release.cover %}
+    <p><img class="release-cover" src="{{release.cover}}" alt="cover"/></p>
+  {% endif %}
 
-<hr>
+{% endfor %}
 
 {{ content | safe }}

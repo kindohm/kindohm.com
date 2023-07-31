@@ -58,3 +58,7 @@ footer {
   margin-top: 4rem;
 }
 
+.release-cover {
+  width: 100%;
+  max-width: 500px;
+}
