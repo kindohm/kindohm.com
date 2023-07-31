@@ -1,0 +1,10 @@
+<ul>
+  {% for gig in appearances %}
+    <li>{{ gig.date | date("MMMM Do, YYYY") }}
+      {%- if gig.extra -%}
+        {{ ' ' + gig.extra }}
+      {%- endif -%}
+      &nbsp;@ {{gig.place}}
+    </li>
+  {% endfor %}
+</ul>
