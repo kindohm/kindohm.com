@@ -10,7 +10,6 @@ const data = [
     bandcampUrl:
       'https://kindohm.bandcamp.com/album/prompt-3?label=407192147&tab=music',
     isHosted: true,
-    hasPage: true,
   },
   {
     id: 'merge-experience',
@@ -144,15 +143,6 @@ const data = [
     isHosted: false,
   },
   {
-    id: 'zero-likes',
-    title: 'Zero Likes',
-    artist: 'kindohm',
-    date: '2016-07-08T00:12:00.000Z',
-    bandcampUrl:
-      'https://naboamusic.tumblr.com/post/147101480094/nab096-kindohm-zero-likes-download',
-    isHosted: false,
-  },
-  {
     id: 'dare-to-step-away',
     title: 'Dare to Step Away',
     artist: 'kindohm',
@@ -195,9 +185,9 @@ const data = [
 ];
 
 module.exports = data.map((release) => {
-  const { id, isHosted, hasPage, bandcampUrl } = release;
+  const { id, isHosted, bandcampUrl } = release;
 
-  const link = hasPage ? `/releases/${id}` : bandcampUrl;
+  const link = isHosted ? `/discography/${id}` : bandcampUrl;
   const filename = isHosted ? `kindohm.${id}.zip` : undefined;
   const downloadUrl = filename
     ? `${contentRoot}/releases/${id}/${filename}`
@@ -206,8 +196,6 @@ module.exports = data.map((release) => {
   const cover = isHosted
     ? `${contentRoot}/releases/${id}/cover.jpg`
     : undefined;
-
-  console.log('cover', cover);
 
   return {
     ...release,

@@ -1,10 +1,10 @@
 body {
-  font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.25rem;
   margin: 1rem;
   background-color: #fff;
   color: #222;
+  font-family: monospace;
 }
 
 h1,
@@ -56,9 +56,4 @@ footer {
 
 .not-found {
   margin-top: 4rem;
-}
-
-.release-cover {
-  width: 100%;
-  max-width: 500px;
 }
