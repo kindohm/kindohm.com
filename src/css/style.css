@@ -21,6 +21,13 @@ h1 {
   font-size: 7rem;
 }
 
+@media (max-width: 768px) {
+h1 {
+  font-size: 5rem;
+}
+}
+
+
 h2 {
   font-size: 3rem;
 }
