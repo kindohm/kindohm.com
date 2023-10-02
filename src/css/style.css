@@ -1,10 +1,10 @@
 body {
-  font-family: sans-serif;
-  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.1rem;
   line-height: 1.25rem;
   margin: 1rem;
-  background-color: #fff;
-  color: #222;
+  background-color: #a75e30;
+  color: #00294e;
 }
 
 h1,
@@ -13,27 +13,27 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 200;
+  font-weight: 700;
   text-transform: lowercase;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 7rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 body,
 a:link,
 a:active,
 a:visited {
-  color: #222;
+  color: #00294e;
 }
 
 a:hover {
@@ -63,26 +63,6 @@ footer {
   max-width: 500px;
 }
 
-.flexcontainer {
-  display: flex;
-  margin: 0; padding: 0;
-  max-width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.flexcontainer li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 12rem;
-  height: 16rem;
-}
-
-.flexcontainer li img {
-  max-width: 100%;
-}
-
-.flexcontainer li a {
-  color: #999;
+li {
+  margin-bottom: 0.5rem;
 }

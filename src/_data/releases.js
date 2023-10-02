@@ -13,6 +13,14 @@ const data = [
     coverPath: '/releases/prompt-3/cover.jpg',
   },
   {
+    id: 'dskflds',
+    title: 'dskflds',
+    artist: 'eaccess',
+    date: '2023-06-25T00:12:00.000Z',
+    bandcampUrl: 'https://eacces.bandcamp.com/album/dskflds',
+    coverUrl: 'https://f4.bcbits.com/img/a3725400916_16.jpg',
+  },
+  {
     id: 'merge-experience',
     title: 'Merge Experience',
     artist: 'kindohm',
