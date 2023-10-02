@@ -1,0 +1,9 @@
+<li>
+  <a href="{{ album.bandcampUrl }}" target="_blank"><img src="{{album.coverUrl}}"/></a>
+  {{album.title}}<br/>
+  <a href="{{album.bandcampUrl}}" target="_blank">buy</a>
+
+  {% if album.downloadUrl %}
+    <a href="{{album.downloadUrl}}">download</a>
+  {% endif %}
+</li>

@@ -62,3 +62,27 @@ footer {
   width: 100%;
   max-width: 500px;
 }
+
+.flexcontainer {
+  display: flex;
+  margin: 0; padding: 0;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flexcontainer li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 12rem;
+  height: 16rem;
+}
+
+.flexcontainer li img {
+  max-width: 100%;
+}
+
+.flexcontainer li a {
+  color: #999;
+}
