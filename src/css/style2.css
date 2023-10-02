@@ -3,8 +3,8 @@ body {
   font-size: 1.1rem;
   line-height: 1.25rem;
   margin: 1rem;
-  background-color: #a75e30;
-  color: #00294e;
+  background-color: #10b19f;
+  color: #a30029;
 }
 
 h1,
@@ -40,7 +40,7 @@ body,
 a:link,
 a:active,
 a:visited {
-  color: #00294e;
+  color: #a30029;
 }
 
 a:hover {
