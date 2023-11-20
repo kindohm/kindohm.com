@@ -3,6 +3,16 @@ const { contentRoot } = config;
 
 const data = [
   {
+    id: 'get',
+    title: 'GET',
+    artist: 'kindohm',
+    date: '2023-11-30T00:12:00.000Z',
+    bandcampUrl:
+      'https://kindohm.bandcamp.com/album/get',
+    downloadPath: '/releases/get/kindohm.GET.mp3.zip',
+    coverPath: 'https://f4.bcbits.com/img/a3271475075_10.jpg',
+  },
+  {
     id: 'prompt-3',
     title: 'Prompt 3',
     artist: 'kindohm',
