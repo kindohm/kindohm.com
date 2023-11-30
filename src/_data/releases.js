@@ -10,6 +10,7 @@ const data = [
     bandcampUrl:
       'https://kindohm.bandcamp.com/album/get',
     coverPath: 'https://f4.bcbits.com/img/a3271475075_10.jpg',
+    downloadPath: '/releases/get/kindohm.GET.mp3.zip'
   },
   {
     id: 'prompt-3',
