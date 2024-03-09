@@ -38,6 +38,13 @@ const { foreground, background } = getCombo();
 console.log('colors:', { foreground, background });
 
 module.exports = {
+  risks: [
+    'dry mouth',
+    'sudden death or dismemberment',
+    'night sweats',
+    'drowsiness',
+    'dizziness',
+  ],
   foreground,
   background,
 };
