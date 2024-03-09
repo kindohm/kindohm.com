@@ -7,10 +7,9 @@ const data = [
     title: 'GET',
     artist: 'kindohm',
     date: '2023-11-30T00:12:00.000Z',
-    bandcampUrl:
-      'https://kindohm.bandcamp.com/album/get',
+    bandcampUrl: 'https://kindohm.bandcamp.com/album/get',
     coverPath: 'https://f4.bcbits.com/img/a3271475075_10.jpg',
-    downloadPath: '/releases/get/kindohm.GET.mp3.zip'
+    downloadPath: '/releases/get/kindohm.GET.mp3.zip',
   },
   {
     id: 'prompt-3',
@@ -28,7 +27,8 @@ const data = [
     artist: 'eaccess',
     date: '2023-06-25T00:12:00.000Z',
     bandcampUrl: 'https://eacces.bandcamp.com/album/dskflds',
-    coverUrl: 'https://f4.bcbits.com/img/a3725400916_16.jpg',
+    downloadPath: '/releases/dskflds/eacces.dskflds.mp3.zip',
+    coverPath: '/releases/dskflds/cover.jpg',
   },
   {
     id: 'merge-experience',
