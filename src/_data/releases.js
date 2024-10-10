@@ -159,12 +159,8 @@ const data = [
     date: '2016-07-08T00:12:00.000Z',
     bandcampUrl:
       'https://naboamusic.tumblr.com/post/147101480094/nab096-kindohm-zero-likes-download',
-<<<<<<< HEAD
-    isHosted: false,
-=======
     coverUrl:
       'https://64.media.tumblr.com/efa26070ed55fd9a982cbe09e33c85a9/tumblr_oa0clavvjZ1qbh4zgo1_500.png',
->>>>>>> fccf291b887117e3bebf9bcaf25c355c5971a70f
   },
   {
     id: 'dare-to-step-away',
@@ -209,19 +205,10 @@ const data = [
 ];
 
 module.exports = data.map((release) => {
-<<<<<<< HEAD
-  const { id, isHosted, bandcampUrl } = release;
-
-  const link = isHosted ? `/discography/${id}` : bandcampUrl;
-  const filename = isHosted ? `kindohm.${id}.zip` : undefined;
-  const downloadUrl = filename
-    ? `${contentRoot}/releases/${id}/${filename}`
-=======
   const { downloadPath, coverPath, coverUrl } = release;
 
   const downloadUrl = downloadPath
     ? `${contentRoot}${downloadPath}`
->>>>>>> fccf291b887117e3bebf9bcaf25c355c5971a70f
     : undefined;
 
   const coverUrlActual = coverUrl
