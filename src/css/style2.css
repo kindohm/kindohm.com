@@ -1,19 +1,10 @@
 body {
-<<<<<<< HEAD:src/css/style.css
-  font-size: 1rem;
-  line-height: 1.25rem;
-  margin: 1rem;
-  background-color: #fff;
-  color: #222;
-  font-family: monospace;
-=======
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.1rem;
   line-height: 1.25rem;
   margin: 1rem;
   background-color: #10b19f;
   color: #a30029;
->>>>>>> fccf291b887117e3bebf9bcaf25c355c5971a70f:src/css/style2.css
 }
 
 h1,
@@ -75,8 +66,6 @@ footer {
 .not-found {
   margin-top: 4rem;
 }
-<<<<<<< HEAD:src/css/style.css
-=======
 
 .release-cover {
   width: 100%;
@@ -86,4 +75,3 @@ footer {
 li {
   margin-bottom: 0.5rem;
 }
->>>>>>> fccf291b887117e3bebf9bcaf25c355c5971a70f:src/css/style2.css
