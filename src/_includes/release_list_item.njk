@@ -1,3 +1,10 @@
 <li>
-  <a href="{{ album.link }}">{{ album.title }}</a>
-      ({{ album.date | date("YYYY") }})</li>
+  <a href="{{ album.bandcampUrl }}" target="_blank">{{ album.title }}</a>
+  {% if album.artist != 'kindohm' %}
+        as {{ album.artist }}
+  {% endif %}
+      ({{ album.date | date("YYYY") }})
+      {% if album.downloadUrl %}
+    <a href="{{album.downloadUrl}}">free download</a>
+    {%endif%}
+  </li>

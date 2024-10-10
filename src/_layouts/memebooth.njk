@@ -1,0 +1,16 @@
+---
+layout: layout.njk
+---
+
+<div class="memebooth">
+
+  <h2><a href="/memebooth">The Meme Booth (podcast)</a></h2>
+
+  <h3>{{title}}</h3>
+
+  {% if published %}
+  <p>Published <time>{{ published }}</time></p>
+  {% endif %}
+
+  {{ content | safe }}
+</div>

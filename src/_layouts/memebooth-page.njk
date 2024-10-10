@@ -1,0 +1,21 @@
+---
+pagination:
+  data: memebooth
+  alias: episode
+  size: 1
+permalink: "memebooth/{{ episode.title | slugify }}/"
+layout: memebooth.njk
+---
+
+<h3>{{ episode.title }}</h3>
+
+<p>Published {{ episode.published}}</p>
+
+{{ episode.embed  | safe }}
+<ul>
+  {% for track in episode.playlist %}
+  <li>{{ track }}</li>
+  {% endfor %}
+</ul>
+
+<p>{{ page.permalink }}</p>
