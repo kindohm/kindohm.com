@@ -3,6 +3,15 @@ const { contentRoot } = config;
 
 const data = [
   {
+    id: 'river-cairn',
+    title: 'River Cairn',
+    artist: 'kindohm',
+    date: '2024-11-22T00:12:00.000Z',
+    bandcampUrl: 'https://kindohm.bandcamp.com/album/river-cairn',
+    coverPath: 'https://f4.bcbits.com/img/a3029593361_10.jpg',
+    downloadPath: '/releases/river-cairn/kindohm.river-cairn.mp3.zip',
+  },
+  {
     id: 'get',
     title: 'GET',
     artist: 'kindohm',
