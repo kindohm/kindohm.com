@@ -3,6 +3,17 @@ const { contentRoot } = config;
 
 const data = [
   {
+    id: 'the-revolution-will-not-be-generated',
+    title: 'the revolution will not be generated',
+    artist: 'speed table',
+    date: '2024-12-27T00:12:00.000Z',
+    bandcampUrl:
+      'https://speedtable.bandcamp.com/album/the-revolution-will-not-be-generated',
+    coverPath: 'https://f4.bcbits.com/img/a1861131693_10.jpg',
+    downloadPath:
+      '/releases/the-revolution-will-not-be-generated/speed-table.the-revolution-will-not-be-generated.mp3.zip',
+  },
+  {
     id: 'river-cairn',
     title: 'River Cairn',
     artist: 'kindohm',
