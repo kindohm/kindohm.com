@@ -3,6 +3,15 @@ const { contentRoot } = config;
 
 const data = [
   {
+    id: 'i-dream-of-tires',
+    title: 'I dream of tires',
+    artist: 'eacces',
+    date: '2025-09-09T00:12:00.000Z',
+    bandcampUrl: 'https://eacces.bandcamp.com/album/i-dream-of-tires',
+    coverPath: 'https://f4.bcbits.com/img/a3523994070_10.jpg',
+    downloadPath: '/releases/i-dream-of-tires/eacces.i-dream-of-tires.mp3.zip',
+  },
+  {
     id: 'the-revolution-will-not-be-generated',
     title: 'the revolution will not be generated',
     artist: 'speed table',
