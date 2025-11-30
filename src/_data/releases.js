@@ -8,7 +8,7 @@ const data = [
     artist: 'eacces',
     date: '2025-09-09T00:12:00.000Z',
     bandcampUrl: 'https://eacces.bandcamp.com/album/i-dream-of-tires',
-    coverPath: 'https://f4.bcbits.com/img/a3523994070_10.jpg',
+    coverPath: '/releases/i-dream-of-tires/cover.jpg',
     downloadPath: '/releases/i-dream-of-tires/eacces.i-dream-of-tires.mp3.zip',
   },
   {
@@ -28,7 +28,7 @@ const data = [
     artist: 'kindohm',
     date: '2024-11-22T00:12:00.000Z',
     bandcampUrl: 'https://kindohm.bandcamp.com/album/river-cairn',
-    coverPath: 'https://f4.bcbits.com/img/a3029593361_10.jpg',
+    coverPath: '/releases/river-cairn/cover.jpg',
     downloadPath: '/releases/river-cairn/kindohm.river-cairn.mp3.zip',
   },
   {
@@ -37,7 +37,7 @@ const data = [
     artist: 'kindohm',
     date: '2023-11-30T00:12:00.000Z',
     bandcampUrl: 'https://kindohm.bandcamp.com/album/get',
-    coverPath: 'https://f4.bcbits.com/img/a3271475075_10.jpg',
+    coverPath: '/releases/get/cover.jpg',
     downloadPath: '/releases/get/kindohm.GET.mp3.zip',
   },
   {
@@ -53,7 +53,7 @@ const data = [
   {
     id: 'dskflds',
     title: 'dskflds',
-    artist: 'eaccess',
+    artist: 'eacces',
     date: '2023-06-25T00:12:00.000Z',
     bandcampUrl: 'https://eacces.bandcamp.com/album/dskflds',
     downloadPath: '/releases/dskflds/eacces.dskflds.mp3.zip',

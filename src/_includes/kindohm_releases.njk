@@ -1,0 +1,8 @@
+<div class="artist-container">
+  <h3>As Kindohm</h3>
+  <ul>
+    {% for album in kindohmReleases %}
+      {% include "release_list_grid_item.njk" %}
+    {% endfor %}
+  </ul>
+</div>
