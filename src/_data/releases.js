@@ -12,6 +12,14 @@ const data = [
     downloadPath: '/releases/i-dream-of-tires/eacces.i-dream-of-tires.mp3.zip',
   },
   {
+    id: 'three-degrees',
+    title: 'Three Degrees',
+    artist: 'kindohm + jesse whitney',
+    date: '2022-01-24T00:12:00.000Z',
+    bandcampUrl: 'https://aethersound.bandcamp.com/album/three-degrees',
+    coverPath: '/images/album-covers/three-degrees.jpg',
+  },
+  {
     id: 'the-revolution-will-not-be-generated',
     title: 'the revolution will not be generated',
     artist: 'speed table',
@@ -75,14 +83,7 @@ const data = [
     bandcampUrl: 'https://aethersound.bandcamp.com/album/vacuity-shared',
     coverUrl: 'https://f4.bcbits.com/img/a2913544726_16.jpg',
   },
-  {
-    id: 'three-degrees',
-    title: 'Three Degrees',
-    artist: 'kindohm',
-    date: '2022-01-14T00:12:00.000Z',
-    bandcampUrl: 'https://aethersound.bandcamp.com/album/three-degrees',
-    coverUrl: 'https://f4.bcbits.com/img/a3746956286_16.jpg',
-  },
+
   {
     id: 'vr-sunset',
     title: 'VR Sunset',
