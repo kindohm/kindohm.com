@@ -1,10 +1,15 @@
-<li>
-  <a href="{{ album.bandcampUrl }}" target="_blank">{{ album.title }}</a>
-  {% if album.artist != 'kindohm' %}
-        as {{ album.artist }}
-  {% endif %}
+<tr>
+  <td>
+    <a href="{{ album.bandcampUrl }}" target="_blank">{{ album.title }}</a>
       ({{ album.date | date("YYYY") }})
-      {% if album.downloadUrl %}
-    <a href="{{album.downloadUrl}}">free download</a>
-    {%endif%}
+      </td>
+
+  <td>
+    <a href="{{album.bandcampUrl}}">buy</a>
+  </td>
+  <td>
+    {% if album.downloadUrl %}
+      <a href="{{album.downloadUrl}}">download</a>
+      {%endif%}
+    </td>
   </li>

@@ -1,8 +1,11 @@
-<div class="artist-container">
+<div>
   <h3>Kindohm + Jesse Whitney</h3>
-  <ul>
-    {% for album in jesseReleases %}
-      {% include "release_list_grid_item.njk" %}
-    {% endfor %}
-  </ul>
+  <table>
+    <tbody>
+
+      {% for album in jesseReleases %}
+        {% include "release_list_item.njk" %}
+      {% endfor %}
+    </tbody>
+  </table>
 </div>

@@ -1,8 +1,10 @@
-<div class="artist-container">
+<div>
   <h3>As eacces</h3>
-  <ul>
-    {% for album in eaccesReleases %}
-      {% include "release_list_grid_item.njk" %}
-    {% endfor %}
-  </ul>
+  <table>
+    <tbody>
+      {% for album in eaccesReleases %}
+        {% include "release_list_item.njk" %}
+      {% endfor %}
+    </tbody>
+  </table>
 </div>

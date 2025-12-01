@@ -1,0 +1,76 @@
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-family: monospace;
+  margin: 1rem;
+  line-height: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  text-transform: lowercase;
+  font-size: 1.1rem;
+}
+
+/* body,
+a:link,
+a:active,
+a:visited {
+}
+ */
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 a,
+h2 a {
+  text-decoration: none;
+}
+
+h1 a:hover,
+h2 a:hover {
+  text-decoration: underline;
+}
+
+h1::before {
+  content: '# ';
+}
+
+h2::before {
+  content: '## ';
+}
+
+h3::before {
+  content: '### ';
+}
+
+h4::before {
+  content: '#### ';
+}
+
+h5::before {
+  content: '##### ';
+}
+
+h6::before {
+  content: '###### ';
+}
+
+footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+}
+
+.not-found {
+  margin-top: 4rem;
+}
+
+td:not(:first-child) {
+  padding-left: 1rem;
+}
