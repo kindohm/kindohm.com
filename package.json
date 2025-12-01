@@ -1,7 +1,7 @@
 {
   "name": "kindohm.com",
   "version": "4.0.0",
-  "description": "Personal web site.",
+  "description": "Personal web site. And stuff.",
   "scripts": {
     "dev": "eleventy --serve",
     "start": "eleventy --serve",
