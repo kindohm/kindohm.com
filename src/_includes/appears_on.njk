@@ -1,0 +1,10 @@
+<div>
+  <h3>Appears on...</h3>
+  <table>
+    <tbody>
+      {% for album in appearsOn %}
+        {% include "release_list_item.njk" %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

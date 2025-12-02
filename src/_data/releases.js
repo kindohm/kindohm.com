@@ -232,24 +232,124 @@ const data = [
     bandcampUrl: 'https://kindohm.bandcamp.com/album/defragmentation-fail-ep',
     coverUrl: 'https://f4.bcbits.com/img/a2281924579_16.jpg',
   },
+  {
+    id: 'attnspan',
+    title: 'ATTN:SPAN',
+    artist: 'compilation',
+    date: '2020-05-06T12:00:00.000Z',
+    bandcampUrl: 'https://attnspancompilation.bandcamp.com/album/attn-span',
+  },
+  {
+    id: 'breggeh',
+    title: "Gimme Some Reggae!!! Guns N' Roses Attempt Reggae! ...Remixed",
+    artist: 'compilation',
+    date: '2020-10-31T12:00:00.000Z',
+    bandcampUrl:
+      'https://neondoom.bandcamp.com/album/gimme-some-reggae-guns-n-roses-attempt-reggae-remixed',
+  },
+  {
+    id: '',
+    title: '25 Years of Igloo Magazine',
+    artist: 'compilation',
+    date: '2025-05-15T12:00:00.000Z',
+    bandcampUrl:
+      'https://evel.bandcamp.com/album/25-years-of-igloo-magazine-evel-igloo-trax',
+  },
+  {
+    id: 'aether',
+    title: 'Five Years of Æther Sound',
+    artist: 'compilation',
+    date: '2022-12-16T12:00:00.000Z',
+    bandcampUrl:
+      'https://aethersound.bandcamp.com/album/five-years-of-ther-sound',
+  },
+  {
+    id: 'year-one-sat-era',
+    title: 'Year One: Revisited',
+    artist: 'compilation',
+    date: '2021-06-04T12:00:00.000Z',
+    bandcampUrl:
+      'https://sat-era.bandcamp.com/album/year-one-revisited-serayr01',
+  },
+  {
+    id: 'plusminus',
+    title: 'Plus Minus',
+    artist: 'compilation',
+    date: '2021-02-18T12:00:00.000Z',
+    bandcampUrl: 'https://kaer-uiks.bandcamp.com/album/plus-minus',
+  },
+  {
+    id: 'rondogs',
+    title: 'Rondogs Vol. 1',
+    artist: 'compilation',
+    date: '2021-01-09T12:00:00.000Z',
+    bandcampUrl: 'https://superhexagon.bandcamp.com/album/rondogs-vol-1-2',
+  },
+  {
+    id: 'aaa1',
+    title: 'Algorithmic Art Assembly v1.0',
+    artist: 'compilation',
+    date: '2020-02-26T12:00:00.000Z',
+    bandcampUrl:
+      'https://highpointlowlife.bandcamp.com/album/algorithmic-art-assembly-v10',
+  },
+  {
+    id: 'shackamaxon',
+    title: 'Shackamaxon',
+    artist: 'compilation',
+    date: '2020-01-28T12:00:00.000Z',
+    bandcampUrl: 'https://conditionalrecs.bandcamp.com/album/shackamaxon',
+  },
+  {
+    id: 'bees',
+    title: 'For the Bees Really',
+    artist: 'compilation',
+    date: '2018-11-17T12:00:00.000Z',
+    bandcampUrl:
+      'https://newyorkhaunted.bandcamp.com/album/nyh156-various-for-the-bees-really',
+  },
+  {
+    id: 'misapplications',
+    title: 'misapplications',
+    artist: 'compilation',
+    date: '2017-09-05T12:00:00.000Z',
+    bandcampUrl: 'https://conditionalrecs.bandcamp.com/album/misapplications',
+  },
+  {
+    id: 'alrededor',
+    title: 'Live coding alrededor del sol',
+    artist: 'compilation',
+    date: '2017-11-17T12:00:00.000Z',
+    bandcampUrl:
+      'https://iclc2017.bandcamp.com/album/live-coding-alrededor-del-sol',
+  },
+  {
+    id: 'loltrax001',
+    title: 'LOLTRAX001',
+    artist: 'compilation',
+    date: '2023-12-01T12:00:00.000Z',
+    bandcampUrl: 'https://loleditions.bandcamp.com/album/loltrax001',
+  },
 ];
 
-module.exports = data.map((release) => {
-  const { downloadPath, coverPath, coverUrl } = release;
+module.exports = data
+  .map((release) => {
+    const { downloadPath, coverPath, coverUrl } = release;
 
-  const downloadUrl = downloadPath
-    ? `${contentRoot}${downloadPath}`
-    : undefined;
+    const downloadUrl = downloadPath
+      ? `${contentRoot}${downloadPath}`
+      : undefined;
 
-  const coverUrlActual = coverUrl
-    ? coverUrl
-    : coverPath
-    ? `${contentRoot}${coverPath}`
-    : undefined;
+    const coverUrlActual = coverUrl
+      ? coverUrl
+      : coverPath
+      ? `${contentRoot}${coverPath}`
+      : undefined;
 
-  return {
-    ...release,
-    downloadUrl,
-    coverUrl: coverUrlActual,
-  };
-});
+    return {
+      ...release,
+      downloadUrl,
+      coverUrl: coverUrlActual,
+    };
+  })
+  .sort((a, b) => (a.date > b.date ? -1 : 1));
