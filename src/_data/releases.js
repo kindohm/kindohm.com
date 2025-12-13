@@ -330,6 +330,14 @@ const data = [
     date: '2023-12-01T12:00:00.000Z',
     bandcampUrl: 'https://loleditions.bandcamp.com/album/loltrax001',
   },
+  {
+    id: 'compassion',
+    title: 'Compassion through algorithms volume iii',
+    artist: 'compilation',
+    date: '2025-12-05T12:00:00.000Z',
+    bandcampUrl:
+      'https://algorave.bandcamp.com/album/compassion-through-algorithms-volume-iii',
+  },
 ];
 
 module.exports = data
