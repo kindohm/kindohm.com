@@ -1,0 +1,92 @@
+---
+layout: layout.njk
+---
+
+<p>I listened to music in 2025.</p>
+
+<p>I don't really use any streaming services to listen to music,
+but I do use a smartphone music app and last.fm. From last.fm I 
+can get a copy of all of my music-listening history (all time) whenever I like.</p>
+
+<p>So here's a quick and easy summary of what I listened to in 2025.</p>
+
+<p>My crude analysis:</p>
+
+<ul>
+  <li>Plusser and Napalm Death were notable new artists for me
+  this year</li>
+  <li>Autechre and Kirk Barley were solid favorites</li>
+  <li>I still listen to Helmet after 30 years</li>
+</ul>
+
+<p>DISCLAIMER: I usually listen to my entire digital music library on
+shuffle. Admittedly, I also tend to listen once to the music I buy. 
+As a result, these numbers probably look a little small and
+weird. </p>
+
+<h2>Top artists</h2>
+
+<table cellpadding="0" cellspacing="0" class="wrapped">
+
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Listens</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for x in wrapped2025.artistListens %}
+      <tr>
+        <td>{{ x.artist }}</td>
+        <td>{{ x.listens }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Top tracks</h2>
+
+<table cellpadding="0" cellspacing="0" class="wrapped">
+
+  <thead>
+    <tr>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Listens</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for x in wrapped2025.trackListens %}
+      <tr>
+        <td>{{ x.title }}</td>
+        <td>{{ x.artist }}</td>
+        <td>{{ x.listens }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Top albums</h2>
+
+<table cellpadding="0" cellspacing="0" class="wrapped">
+
+  <thead>
+    <tr>
+      <th>Album</th>
+      <th>Artist</th>
+      <th>Listens</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for x in wrapped2025.albumListens %}
+      <tr>
+        <td>{{ x.album }}</td>
+        <td>{{ x.artist }}</td>
+        <td>{{ x.listens }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
