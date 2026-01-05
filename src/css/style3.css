@@ -4,6 +4,13 @@ body {
   margin: 1rem;
   line-height: 1.25rem;
   font-size: 1rem;
+  text-align: center;
+}
+
+.inner {
+  text-align: left;
+  margin: auto;
+  max-width: 600px;
 }
 
 h1,

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="keywords" content="kindohm hodnick livecoding live-coding algorave code programming music electronic improvisation art audio computer computers tidalcycles synthesizer modular harmor synthesis minneapolis minnesota"/>
     <meta name="description" content="Mike Hodnick a.k.a. Kindohm. Programmer and sound artist."/>
-    <link rel="stylesheet" href="/css/style3.css?v=aftonnnn">
+    <link rel="stylesheet" href="/css/style3.css?v=aaxxxx">
 
     <style>
       body {
@@ -34,15 +34,16 @@
     </style>
   </head>
   <body>
+    <div class="inner">
+      {% include 'header.njk' %}
 
-    {% include 'header.njk' %}
+      <main>
+        {{ content | safe }}
+      </main>
 
-    <main>
-      {{ content | safe }}
-    </main>
-
-    <footer>
+      <footer>
     © Copyright 2026 Mike Hodnick. Unauthorized duplication may result in {{ metadata.risks | random }}. 
     </footer>
+    </div>
   </body>
 </html>
