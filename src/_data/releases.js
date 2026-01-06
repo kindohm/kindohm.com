@@ -338,6 +338,14 @@ const data = [
     bandcampUrl:
       'https://algorave.bandcamp.com/album/compassion-through-algorithms-volume-iii',
   },
+  {
+    id: 'variadic-daemon',
+    title: 'variadic daemon',
+    artist: 'kindohm',
+    date: '2026-01-08T12:00:00.000Z',
+    bandcampUrl: 'https://kindohm.bandcamp.com/album/variadic-daemon',
+    downloadPath: '/releases/variadic-daemon/kindohm.variadic-daemon.mp3.zip',
+  },
 ];
 
 module.exports = data
