@@ -1,16 +1,83 @@
+:root {
+  --measure: 42rem;
+  --gutter: 1rem;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --font-text: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  --section-rule: linear-gradient(
+    90deg,
+    var(--ink) 0 1.2rem,
+    transparent 1.2rem 1.55rem,
+    var(--hot) 1.55rem 2.75rem,
+    transparent 2.75rem 3.1rem,
+    var(--cool) 3.1rem 4.3rem,
+    transparent 4.3rem 4.65rem,
+    var(--signal) 4.65rem 5.85rem
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
 body {
-  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
-  font-family: sans-serif;
-  margin: 1rem;
-  line-height: 1.25rem;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-text);
   font-size: 1rem;
-  text-align: center;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 0.35rem;
+  background: var(--section-rule);
 }
 
 .inner {
-  text-align: left;
-  margin: auto;
-  max-width: 650px;
+  width: min(100% - 2rem, var(--measure));
+  margin-inline: auto;
+  padding: 2rem 0 3rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--ink);
+}
+
+.site-mark {
+  display: block;
+  width: 1.45rem;
+  height: 1.45rem;
+  background:
+    linear-gradient(90deg, var(--ink) 0 50%, var(--hot) 50% 100%) top / 100% 50%
+      no-repeat,
+    linear-gradient(90deg, var(--cool) 0 50%, var(--signal) 50% 100%) bottom /
+      100% 50% no-repeat;
+  box-shadow: 0.18rem 0.18rem 0 var(--bar);
+}
+
+main {
+  position: relative;
 }
 
 h1,
@@ -19,83 +86,255 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-code);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
   text-transform: lowercase;
-  font-size: 1.25rem;
-  margin-top: 2rem;
 }
 
-/* body,
-a:link,
-a:active,
-a:visited {
+h1 {
+  margin: 0;
 }
- */
+
+h2 {
+  position: relative;
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5.85rem;
+  height: 0.55rem;
+  background: var(--section-rule);
+}
+
+h3 {
+  margin-top: var(--space-4);
+  color: var(--muted);
+}
+
+h1::before {
+  content: "# ";
+  color: var(--hot);
+}
+
+h2::before {
+  content: "## ";
+  color: var(--hot);
+}
+
+h3::before {
+  content: "### ";
+  color: var(--hot);
+}
+
+h4::before {
+  content: "#### ";
+  color: var(--hot);
+}
+
+h5::before {
+  content: "##### ";
+  color: var(--hot);
+}
+
+h6::before {
+  content: "###### ";
+  color: var(--hot);
+}
+
+p {
+  margin: 0 0 var(--space-3);
+}
+
+ul,
+ol {
+  margin: 0 0 var(--space-3) 1.2rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.35rem;
+  padding-left: 0.1rem;
+}
+
+li::marker {
+  color: var(--hot);
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+  color: var(--link);
+  text-decoration-color: var(--bar);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.22em;
+}
 
 a:hover {
-  text-decoration: none;
+  color: var(--ink);
+  background: var(--signal);
+  text-decoration-color: var(--ink);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--hot);
+  outline-offset: 0.2rem;
 }
 
 h1 a,
 h2 a {
+  color: var(--ink);
   text-decoration: none;
 }
 
 h1 a:hover,
 h2 a:hover {
+  background: transparent;
+  color: var(--link);
   text-decoration: underline;
+  text-decoration-thickness: 0.1em;
 }
 
-h1::before {
-  content: '# ';
+section {
+  margin-bottom: var(--space-4);
 }
 
-h2::before {
-  content: '## ';
+section > div {
+  margin-top: var(--space-3);
 }
 
-h3::before {
-  content: '### ';
+table {
+  width: 100%;
+  margin: 0 0 var(--space-3);
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
 
-h4::before {
-  content: '#### ';
+td,
+th {
+  padding: 0.45rem 0.65rem 0.45rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--bar), transparent 20%);
+  text-align: left;
+  vertical-align: baseline;
 }
 
-h5::before {
-  content: '##### ';
+td:first-child,
+th:first-child {
+  width: 100%;
 }
 
-h6::before {
-  content: '###### ';
+td:not(:first-child),
+th:not(:first-child) {
+  width: 1%;
+  padding-left: 0.8rem;
+  font-family: var(--font-code);
+  font-size: 0.76rem;
+  white-space: nowrap;
 }
 
-footer {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: 0.75rem;
-}
-
-.not-found {
-  margin-top: 4rem;
-}
-
-td:not(:first-child) {
-  padding-left: 1rem;
+.release-year {
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 0.76rem;
+  white-space: nowrap;
 }
 
 table.wrapped {
-  width: max-content; /* shrink-wrap to content */
-  border-collapse: collapse;
+  width: max-content;
   max-width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+  border-collapse: collapse;
 }
 
 table.wrapped th,
 table.wrapped td {
-  margin: 0;
-  padding: 0.375rem;
+  width: auto;
+  padding: 0.5rem;
+  border: 1px solid var(--bar);
+  font-family: var(--font-code);
+  font-size: 0.78rem;
   white-space: nowrap;
-  text-align: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: var(--space-3) 0;
+  border: 1px solid var(--ink);
+  filter: saturate(0.92) contrast(1.03);
+}
+
+footer {
+  margin-top: var(--space-5);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--bar);
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.not-found {
+  margin-top: var(--space-5);
+}
+
+::selection {
+  color: var(--ink);
+  background: var(--signal);
+}
+
+@media (min-width: 58rem) {
+  .inner {
+    transform: translateX(-2rem);
+  }
+
+  main::before {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    left: -4rem;
+    width: 2rem;
+    border-top: 1px solid var(--bar);
+  }
+}
+
+@media (max-width: 42rem) {
+  body {
+    line-height: 1.55;
+  }
+
+  .inner {
+    width: min(100% - 1.25rem, var(--measure));
+    padding-top: 1.4rem;
+  }
+
+  header {
+    margin-bottom: var(--space-4);
+  }
+
+  h2 {
+    margin-top: var(--space-4);
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  td,
+  th {
+    min-width: max-content;
+  }
 }

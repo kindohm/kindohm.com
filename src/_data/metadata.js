@@ -1,41 +1,42 @@
-const colorable = require('colorable');
+const themes = [
+  {
+    name: 'catalog',
+    foreground: '#121410',
+    background: '#f4f5f1',
+    muted: '#5f625b',
+    bar: '#b9bbb2',
+    link: '#243f9f',
+    signal: '#d7ff35',
+    hot: '#c51f50',
+    cool: '#168f83',
+  },
+  {
+    name: 'basement',
+    foreground: '#e9ede0',
+    background: '#11140f',
+    muted: '#a0a795',
+    bar: '#3a3f35',
+    link: '#b9caff',
+    signal: '#d7ff35',
+    hot: '#ff5578',
+    cool: '#32c1ad',
+  },
+  {
+    name: 'xerox',
+    foreground: '#171713',
+    background: '#eff1ee',
+    muted: '#60635c',
+    bar: '#b5b8b0',
+    link: '#006c79',
+    signal: '#ecff4a',
+    hot: '#c3204f',
+    cool: '#205ad4',
+  },
+];
 
-const rand255 = () => {
-  return Math.floor(Math.random() * 255);
-};
+const theme = themes[Math.floor(Math.random() * themes.length)];
 
-const randHex = () => rand255().toString(16).padStart(2, '0');
-
-const randHexColor = () => `#${randHex()}${randHex()}${randHex()}`;
-
-const getCombo = () => {
-  const randColors = new Array(10).fill(null).reduce((acc, col, i) => {
-    return { ...acc, [`color${i}`]: randHexColor() };
-  }, {});
-
-  const result = colorable(randColors, { compact: true, threshold: 0 });
-
-  const ideals = result
-    .map((c) => {
-      const match = c.combinations.find((cc) => cc.accessibility.aaa === true);
-      if (!match) return null;
-      const foreground = c.hex;
-      const background = match.hex;
-      return { foreground, background };
-    })
-    .filter((x) => !!x);
-
-  if (ideals.length === 0) {
-    console.log('random color combo not found, trying again');
-    return getCombo();
-  }
-
-  return ideals[0];
-};
-
-const { foreground, background } = getCombo();
-
-console.log('colors:', { foreground, background });
+console.log('theme:', theme.name);
 
 module.exports = {
   risks: [
@@ -60,6 +61,7 @@ module.exports = {
     `wondering where socks go`,
     `sudden interest in weather patterns`,
   ],
-  foreground,
-  background,
+  theme,
+  foreground: theme.foreground,
+  background: theme.background,
 };

@@ -1,8 +1,8 @@
 <tr>
   <td>
     <a href="{{ album.bandcampUrl }}" target="_blank">{{ album.title }}</a>
-      ({{ album.date | date("YYYY") }})
-      </td>
+    <span class="release-year">({{ album.date | date("YYYY") }})</span>
+  </td>
 
   <td>
     <a href="{{album.bandcampUrl}}">buy</a>
@@ -10,6 +10,6 @@
   <td>
     {% if album.downloadUrl %}
       <a href="{{album.downloadUrl}}">download</a>
-      {%endif%}
-    </td>
-  </li>
+    {% endif %}
+  </td>
+</tr>

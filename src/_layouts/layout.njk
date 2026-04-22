@@ -9,27 +9,15 @@
     <link rel="stylesheet" href="/css/style3.css?v=aaxxxx">
 
     <style>
-      body {
-        color: {{metadata.foreground}};
-        background-color: {{metadata.background}};
-      }
-
-      a,
-      a:active,
-      a:link,
-      a:visited {
-        color: {{metadata.foreground}};
-      }
-
-      table.wrapped {
-        margin-top: 1rem;
-      }
-
-      table.wrapped td,
-      table.wrapped th {
-        border: solid 1px;
-        border-color: {{metadata.foreground}};
-        padding: 0.5rem;
+      :root {
+        --ink: {{ metadata.theme.foreground }};
+        --paper: {{ metadata.theme.background }};
+        --muted: {{ metadata.theme.muted }};
+        --bar: {{ metadata.theme.bar }};
+        --link: {{ metadata.theme.link }};
+        --signal: {{ metadata.theme.signal }};
+        --hot: {{ metadata.theme.hot }};
+        --cool: {{ metadata.theme.cool }};
       }
     </style>
   </head>
