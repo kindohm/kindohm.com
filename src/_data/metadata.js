@@ -78,7 +78,7 @@ const themes = [
   },
 ];
 
-const theme = themes[Math.floor(Math.random() * themes.length)];
+const theme = themes[0]; // themes[Math.floor(Math.random() * themes.length)];
 
 console.log('theme:', theme.name);
 
